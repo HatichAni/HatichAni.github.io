@@ -21,7 +21,10 @@ alert(2);
       } 
       // return data
 alert(1);
-      alert(this.responseText);
+      alert(this.responseURL);
+alert(this.response);
+alert(xhttp.responseURL);
+alert(xhttp.response);
   };
   xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k",true);
   xhttp.withCredentials = true;
