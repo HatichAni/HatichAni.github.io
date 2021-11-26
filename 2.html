@@ -11,10 +11,12 @@ var xhttp = new XMLHttpRequest();
       // check for redirect
       if (this.status === 302 /* or may any other redirect? */) {
         var location = this.getResponseHeader("Location");
+alert(0);
         alert(location);
       } 
 
       // return data
+alert(1);
       alert(this.responseText);
   };
   xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k");
