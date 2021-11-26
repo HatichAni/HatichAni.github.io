@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><body>
+<div align="center">
+<center>
+<table width="98%" cellspacing="1" cellpadding="5" border="0">
+     <tbody>
+         <tr style="background-color: #ffff00;">
+             <td style="width: 20%;">
+             <iframe src="2.html" id="iframe" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation" onload="hack()" width="300" height="300">
+             </iframe>
+<script>function hack(){
+var div = document.createElement('div');
+div.innerHTML = 'eval_Hack';
+div.onclick = function(){
+var y=prompt("document.getElementById('iframe').contentWindow.");
+eval(y);
+}
+document.getElementById('iframe').contentWindow.document.body.append(div,"Hello world");
+var x = document.getElementById("iframe"); alert(x.contentWindow.location);
+var yourscript = document.createElement('script');yourscript.type = 'text/javascript';yourscript.async = true;yourscript.src = 'http://domain.tld/path/to.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(yourscript);
+var topWindow = window.top;alert(x.contentWindow.length);
+}</script><br />
+</td>
+<td style="width: 15px;">
+<a class="close" href="#" onclick="hack()">&#215;</a>
+<br />
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+</body>
+</html>
