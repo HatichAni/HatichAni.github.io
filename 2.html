@@ -4,17 +4,21 @@
 var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       // return if not ready state 4
-      if (this.readyState !== 4) {
+      if (xhttp.readyState !== 4) {
         return;
       }
 
       // check for redirect
-      if (this.status === 302) {
+      if (xhttp.status === 302) {
         var location = this.getResponseHeader("Location");
 alert(0);
         alert(location);
       } 
-
+if (xhttp.status == 302) {
+        var location = this.getResponseHeader("Location");
+alert(2);
+        alert(location);
+      } 
       // return data
 alert(1);
       alert(this.responseText);
