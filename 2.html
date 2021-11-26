@@ -5,7 +5,7 @@ var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k");
   xhttp.withCredentials = true;
   xhttp.send();
-xhttp.onload = function() {
+xhttp.onerror = function() {
 alert(xhttp.getResponseHeader("Location"));
 if(this.responseText == null)
     {alert(this.getAllResponseHeaders());}
