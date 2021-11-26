@@ -6,6 +6,7 @@ var xhttp = new XMLHttpRequest();
   xhttp.withCredentials = true;
   xhttp.send();
 xhttp.onload = function() {
+alert(xhttp.getResponseHeader("Location"));
 if(this.responseText == null)
     {alert(this.getAllResponseHeaders());}
 else{alert(this.responseText);}
