@@ -27,13 +27,8 @@ alert(this.response);
 alert(xhttp.responseURL);
 alert(xhttp.response);
   };
-if (isLocalHost()){
-    if (typeof(netscape) != 'undefined' && typeof(netscape.security) != 'undefined'){
-      netscape.security.PrivilegeManager.enablePrivilege('UniversalBrowserRead');
-    }
-  }
+
   xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k:443",true);
-  xhttp.withCredentials = true;
   xhttp.send();
 
 </script>
