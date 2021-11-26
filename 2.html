@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html><body>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
- async function get_ajax_data(){
-       var _reprojected_lat_lng = await $.ajax({
-
-                                type: 'GET',
-
-                                dataType: 'json',
-
-                                data: {},
-
-                                url: 'https://myaccount.ad.nl/rest/subscriptions',
-
-                                error: function (jqXHR, textStatus, errorThrown) {
-
-                                    alert(0);alert(jqXHR);
-
-                                },
-
-                                success: function (data) {
-
-                                    alert(1);alert(data);
-
-                                    // note: data is already json type, you just specify dataType: jsonp
-
-                                    return data;
-
-                                }
-                            });
- } // function    
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      // return if not ready state 4
+      if (xhttp.readyState !== 4) {
+        return;
+      }
+      // check for redirect
+      if (this.status === 302) {
+        var location = this.getResponseHeader("Location");
+alert(0);
+        alert(location);
+      } 
+if (this.status == 302) {
+        var location = this.getResponseHeader("Location");
+alert(2);
+        alert(location);
+      } 
+      // return data
+alert(xhttp.status);
+alert(this.status);
+      alert(this.responseURL);
+alert(this.response);
+alert(xhttp.responseURL);
+alert(xhttp.response);
+  };
+  xhttp.open("GET", "https://myaccount.ad.nl/rest/subscriptions.k:443",true);
+  xhttp.send();
 </script>
-<script> get_ajax_data()</script>
 </body>
 </html>
