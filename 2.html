@@ -2,6 +2,7 @@
 <html><body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
+ async function get_ajax_data(){
        var _reprojected_lat_lng = await $.ajax({
 
                                 type: 'GET',
@@ -27,7 +28,8 @@
                                     return data;
 
                                 }
-                            });    
+                            });
+ } // function    
 </script>
 </body>
 </html>
