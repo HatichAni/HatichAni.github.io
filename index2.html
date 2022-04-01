@@ -5,6 +5,9 @@
   <script type="text/javascript">
     $.getJSON("https://jsonip.com?callback=?", function(data) {
  var x = data.ip;
+document.open();
+  document.write(x);
+  document.close();
       });
   </script>
 </head>
