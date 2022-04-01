@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html><body>
-<script type="application/javascript">
-    function getip(json){
-      alert(json.ip); 
-    }
-</script>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+  <script type="text/javascript">
+    $.getJSON("https://jsonip.com?callback=?", function(data) {
+        alert("Your IP address is :- " + data.ip);
+      });
+  </script>
+</head>
+<body>
 
-<script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=showIP"></script>
 
 </body>
 </html>
